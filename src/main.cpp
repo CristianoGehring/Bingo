@@ -64,7 +64,7 @@ void drawMenu() {
   M5Cardputer.Display.setCursor(10, 110);
   M5Cardputer.Display.setTextColor(DARKGREY);
   M5Cardputer.Display.setTextSize(1);
-  M5Cardputer.Display.println("Use W/S e ENTER");
+  M5Cardputer.Display.println("Use ^/v e ENTER");
 }
 
 void drawNextBall() {
@@ -175,11 +175,11 @@ void loop() {
       
       // Menu
       else if(state == MENU) {
-        if(isKey(status, 'w')) {
+        if(isKey(status, ';')) {
           menuOption = 0;
           drawMenu();
         }
-        else if(isKey(status, 's')) {
+        else if(isKey(status, '.')) {
           menuOption = 1;
           drawMenu();
         }
